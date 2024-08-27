@@ -70,9 +70,9 @@ fi
 dnf list installed mysql
 if [ $? -ne 0 ]
 then 
-    echo "MYSQL is not installed please Install MYSQL"
+    echo -e " $R MYSQL is not installed please Install MYSQL $N"
 
-    dnf install mysqjj -y 
+    dnf install mysql -y 
     if [ $? -ne 0 ]
     then
         echo -e "command is... $R ERROR $N"
