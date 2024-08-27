@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "All passed varaibles: $@"
-echo "script name: $#"
+echo "total paased varguments in the script: $#"
