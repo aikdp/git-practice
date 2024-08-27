@@ -14,6 +14,17 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+#Check user has root access or not
+ROOT(){
+if [ $USERID -ne 0 ]
+    then    
+        echo -e "$R USER does not have root access, Please login as ROOT USER $N" | tee -a $LOG_FILE
+        exit 1
+    else    
+        echo -e "$Y USER has ROOT ACCESS $N"| tee -a $LOG_FILE
+fi
+}
+ROOT
 #validate using functions
 CHECK(){
     if [ $1 -ne 0 ]
@@ -25,16 +36,6 @@ CHECK(){
     fi
 }
 
-#Check user has root access or not
-ROOT(){
-if [ $USERID -ne 0 ]
-    then    
-        echo -e "$R USER does not have root access, Please login as ROOT USER $N" | tee -a $LOG_FILE
-        exit 1
-    else    
-        echo -e "$Y USER has ROOT ACCESS $N"| tee -a $LOG_FILE
-fi
-}
 #Installing packages
 for package in $@
 do 
