@@ -41,7 +41,7 @@ do
     dnf list installed $package &>>$LOG_FILE
         if [ $? -ne 0 ]
             then
-                echo -e "$R $package is not installed, please install $N" | tee -a $LOG_FILE
+                echo -e "$package is not installed, $R please install $package $N" | tee -a $LOG_FILE
                 dnf install $package -y &>>$LOG_FILE
                 CHECK $? "Installing $package" 
             else 
