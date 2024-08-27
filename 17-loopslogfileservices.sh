@@ -19,7 +19,7 @@ if [ $USERID -eq 0 ]
 then    
     echo -e "$Y USER has ROOT ACCESS $N" | TEE -a $LOG_FILE
 else    
-    echo -e "$R USER doesn't have root access, Please login as ROOT USER $N" | TEE -a $LOG_FILE
+    echo -e "$R USER does not have root access, Please login as ROOT USER $N" | TEE -a $LOG_FILE
     exit 1
 fi
 
