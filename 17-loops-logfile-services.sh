@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 #/var/log/loops-log-file redirectors<timestamp>.log
-LOG_FOLDER="/var/log/shell-practice"
+LOG_FOLDER="/var/log/shell"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME/$TIME_STAMP.log"
