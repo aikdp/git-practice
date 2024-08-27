@@ -2,10 +2,10 @@
 
 USERID=$(id -u)
 #/var/log/loops-log-file redirectors<timestamp>.log
-mkdir -p $LOG_FOLDER
 LOG_FOLDER="/var/log/shell-practice"
 SCRIPT_NAME=$($0 | cut -d "." -f1)
 TIME=$(date +%Y-%m-%d-%H-%M-%S)
+mkdir -p $LOG_FOLDER
 LOG_FILE=$($LOG_FOLDER/$SCRIPT_NAME/$TIME.log)
 
 #colors
@@ -13,6 +13,15 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+
+#Check user has root access or not
+if [ $USERID -eq 0 ]
+then    
+    echo -e "$Y USER has ROOT ACCESS $N" &>>LOG_FILE
+else    
+    echo -e "$R USER doesn't have root access, Please login as ROOT USER $N" &>>LOG_FILE
+    exit 1
+fi
 
 #validate using functions
 CHECK(){
@@ -24,16 +33,6 @@ CHECK(){
         exit 1
     fi
 }
-
-#Check user has root access or not
-if [ $USERID -eq 0 ]
-then    
-    echo -e "$Y USER has ROOT ACCESS $N" &>>LOG_FILE
-else    
-    echo -e "$R USER doesn't have root access, Please login as ROOT USER $N" &>>LOG_FILE
-    exit 1
-fi
-
 
 #Installing packages
 for package in $@
