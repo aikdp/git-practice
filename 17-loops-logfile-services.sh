@@ -24,7 +24,6 @@ ROOT(){
         echo -e "$Y USER has ROOT ACCESS $N"| tee -a $LOG_FILE
     fi
 }
-ROOT
 #validate using functions
 CHECK(){
     if [ $1 -ne 0 ]
@@ -35,6 +34,7 @@ CHECK(){
             echo -e "$2 is $G SUCCESS $N" | tee -a $LOG_FILE
     fi
 }
+ROOT
 #Installing packages
 for package in $@
 do 
