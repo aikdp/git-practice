@@ -106,14 +106,23 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+CHECK_ROOT(){
+if [ $USERID -ne 0 ]
+then
+    echo "USER has doesn't have ROOT ACCESS"
+    exit 1
+fi
+}
+CHECK_ROOT
+
 VALIDATE(){
 if [ $1 -ne 0 ]
     then
-        echo -e " $2 command is... $R ERROR $N"
+        echo -e " $2 is... $R ERROR $N"
         exit 1
     else   
         echo -e " $2 is... $G SUCCESS $N"
-    fi 
+ fi 
 }
 
 #check user has ROOT access or not
