@@ -1,20 +1,26 @@
 #!/bin/bash
 
 USERID=$(id -u)
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 CHECK(){
     if [ $1 eq 0]
     then    
-        echo "$2 is SUCCESS"
+        echo -e "$2 is $G SUCCESS $N"
     else
-        echo "$2 is ERROR"
+        echo -e "$2 is $R ERROR $N"
+        exit 1
     fi
 }
 
 if [ $USERID eq 0]
 then    
-    echo "USER has ROOT ACCESS"
+    echo -e "$Y USER has ROOT ACCESS $N"
 else    
-    echo "USER doesn't have root access, Please login as ROOT USER"
+    echo -e "$R USER doesn't have root access, Please login as ROOT USER $N"
     exit 1
 fi
 
@@ -24,11 +30,11 @@ do
     dnf list installed $package
         if [ $? -ne 0 ]
         then
-            echo "$package is not installed, please install"
+            echo -e "$R $package is not installed, please install $N"
             dnf install $package 
             CHECK $? "Installing $package"
         else 
-            echo "$package is Alraedy instaaled, Please ignore"
+            echo "$Y $package is Alraedy instaaled, Please ignore $N"
 
         fi
 done
