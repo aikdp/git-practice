@@ -7,7 +7,7 @@ Y="\e[33m"
 N="\e[0m"
 
 CHECK(){
-    if [ $1 eq 0]
+    if [ $1 -eq 0]
     then    
         echo -e "$2 is $G SUCCESS $N"
     else
