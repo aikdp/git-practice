@@ -31,7 +31,7 @@ do
         if [ $? -ne 0 ]
         then
             echo -e "$R $package is not installed, please install $N"
-            dnf install $package 
+            dnf install $package -y
             CHECK $? "Installing $package"
         else 
             echo "$Y $package is Alraedy instaaled, Please ignore $N"
