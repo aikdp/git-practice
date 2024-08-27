@@ -1,11 +1,14 @@
 #!/bin/bash
 
 USERID=$(id -u)
+
+#colors
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+#validate using functions
 CHECK(){
     if [ $1 -eq 0 ]
     then    
@@ -16,6 +19,7 @@ CHECK(){
     fi
 }
 
+#Check user has root access or not
 if [ $USERID -eq 0 ]
 then    
     echo -e "$Y USER has ROOT ACCESS $N"
@@ -25,6 +29,7 @@ else
 fi
 
 
+#Installing packages
 for package in $@
 do 
     dnf list installed $package
