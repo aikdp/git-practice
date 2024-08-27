@@ -15,6 +15,7 @@ then
     echo "USER has ROOT ACCESS"
 else    
     echo "USER doesn't have root access, Please login as ROOT USER"
+    exit 1
 fi
 
 
