@@ -35,7 +35,6 @@ if [ $USERID -ne 0 ]
         echo -e"$Y USER has ROOT ACCESS $N"| tee -a $LOG_FILE
 fi
 }
-ROOT
 #Installing packages
 for package in $@
 do 
