@@ -124,26 +124,26 @@ then
 fi
 
 #Neat and clean script with MYSQL INSTALLATION
-dnf list installed mysql
-if [ $? -ne 0 ]
-then 
-    echo -e " $R MYSQL is not installed please Install MYSQL $N"
-
-    dnf install mysql -y 
-    VALIDATE $? "Installing MYSQL"
-
-else 
-    echo -e " $Y MYSQL already installed $N"
-fi    
-
-dnf list installed git
+dnf list installed gitjj
 if [ $? -ne 0 ]
 then 
     echo -e " $R GIT is not installed please Install GIT $N"
 
-    dnf install git -y 
+    dnf install gitf -y 
      VALIDATE $? "Installing GIT"
 
 else 
     echo -e " $Y GIT already installed $N"
 fi   
+
+dnf list installed mysqlll
+if [ $? -ne 0 ]
+then 
+    echo -e " $R MYSQL is not installed please Install MYSQL $N"
+
+    dnf install mysqlvg -y 
+    VALIDATE $? "Installing MYSQL"
+
+else 
+    echo -e " $Y MYSQL already installed $N"
+fi    
