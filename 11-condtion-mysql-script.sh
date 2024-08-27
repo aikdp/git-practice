@@ -84,3 +84,4 @@ then
 else 
     echo -e " $Y MYSQL already installed $N"
 fi    
+
