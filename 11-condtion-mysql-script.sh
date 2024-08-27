@@ -34,11 +34,20 @@ then
 fi
 
 #Neat and clean script
-dnf install git -y
+dnf list installed git
 if [ $? -ne 0 ]
-then
-    echo -e "command is... $R ERROR $N"
-    exit 1
-else   
-    echo -e "Installing GIT... $G SUCCESS $N"
-fi
+then 
+    ech "GIT is not installed please Install GIT"
+
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then
+        echo -e "command is... $R ERROR $N"
+        exit 1
+    else   
+        echo -e "Installing GIT... $G SUCCESS $N"
+    fi
+
+else 
+    echo -e " $R GIT already installed $N"
+fi    
