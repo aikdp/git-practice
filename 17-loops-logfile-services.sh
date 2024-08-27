@@ -16,13 +16,13 @@ N="\e[0m"
 
 #Check user has root access or not
 ROOT(){
-if [ $USERID -ne 0 ]
+    if [ $USERID -ne 0 ]
     then    
         echo -e "$R USER does not have root access, Please login as ROOT USER $N" | tee -a $LOG_FILE
         exit 1
     else    
         echo -e "$Y USER has ROOT ACCESS $N"| tee -a $LOG_FILE
-fi
+    fi
 }
 ROOT
 #validate using functions
