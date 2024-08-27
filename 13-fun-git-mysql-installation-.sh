@@ -109,7 +109,7 @@ N="\e[0m"
 CHECK_ROOT(){
 if [ $USERID -ne 0 ]
 then
-    echo "USER has doesn't have ROOT ACCESS"
+    echo -e "USER has doesn't have $R ROOT ACCESS $N"
     exit 1
 fi
 }
