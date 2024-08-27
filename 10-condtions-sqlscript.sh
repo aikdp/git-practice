@@ -9,7 +9,7 @@
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
-    echo -e "\e[31m You don't have root acces, please login as ROOT USER \e[0m]"
+    echo -e "\e[31m You don't have root acces, please login as ROOT USER \e[0m"
     exit 1
 else 
     echo "You are a ROOT ACCESS"
