@@ -125,13 +125,6 @@ if [ $1 -ne 0 ]
  fi 
 }
 
-#check user has ROOT access or not
-if [ $USERID -ne 0 ]
-then
-    echo -e " $R You don't have root acces, please login as ROOT USER $N"
-    exit 1
-fi
-
 #Neat and clean script with MYSQL INSTALLATION
 dnf list installed git
 if [ $? -ne 0 ]
