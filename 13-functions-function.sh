@@ -136,7 +136,7 @@ else
     echo -e " $Y GIT already installed $N"
 fi   
 
-dnf list installed mysqlll
+dnf list installed mysql
 if [ $? -ne 0 ]
 then 
     echo -e " $R MYSQL is not installed please Install MYSQL $N"
