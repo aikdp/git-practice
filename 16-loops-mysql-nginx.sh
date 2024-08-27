@@ -16,7 +16,7 @@ CHECK(){
     fi
 }
 
-if [ $USERID eq 0 ]
+if [ $USERID -eq 0 ]
 then    
     echo -e "$Y USER has ROOT ACCESS $N"
 else    
