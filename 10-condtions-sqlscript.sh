@@ -12,5 +12,5 @@ then
     echo -e "\e[31m You don't have root acces, please login as ROOT USER \e[0m"
     exit 1
 else 
-    echo "You are a ROOT ACCESS"
+    echo -e "\e[32m You have ROOT ACCESS \e[0m"
 fi
