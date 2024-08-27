@@ -2,11 +2,11 @@
 
 USERID=$(id -u)
 #/var/log/loops-log-file redirectors<timestamp>.log
-LOG_FOLDER="/var/log/expense/"
+LOG_FOLDER="/var/log/shell-practice"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIME=$(date +%Y-%m-%d-%H-%M-%S)
 mkdir -p $LOG_FOLDER
-LOG_FILE=$($LOG_FOLDER/$SCRIPT_NAME/$TIME.log)
+LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME/$TIME.log"
 
 #colors
 R="\e[31m"
