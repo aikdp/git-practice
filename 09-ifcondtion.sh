@@ -31,11 +31,20 @@
 # echo "Given: $NUMBER is greater than 17"
 # fi
 
-#Given number is greater than equal
+# #Given number is greater than equal
+# NUMBER=$1
+# if [ $NUMBER -ge 17 ]
+# then
+# echo "Given: $NUMBER is Greater than 17"
+# else 
+# echo "Given: $NUMBER is less than 17"
+# fi
+
+#Given number is not equal
 NUMBER=$1
-if [ $NUMBER -ge 17 ]
+if [ $NUMBER -ne 17 ]
 then
-echo "Given: $NUMBER is Greater than 17"
+echo "Given number is not 17"
 else 
-echo "Given: $NUMBER is less than 17"
+echo "Given number is 17"
 fi
