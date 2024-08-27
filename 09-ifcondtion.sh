@@ -12,8 +12,15 @@
 # echo "Given: $NUMBER is lessthan 17"
 # fi
 
+# NUMBER=$1
+# if [ $NUMBER -lt 17 ]
+# then
+# echo "Given: $NUMBER is less than 17"
+# else 
+# echo "Given: $NUMBER is greater than 17"
+# fi
 NUMBER=$1
-if [ $NUMBER -lt 17 ]
+if [ $NUMBER -le 17 ]
 then
 echo "Given: $NUMBER is less than 17"
 else 
