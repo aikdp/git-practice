@@ -91,7 +91,7 @@ if [ $? -ne 0 ]
 then 
     echo -e " $R GIT is not installed please Install GIT $N"
 
-    dnf install gitvg -y 
+    dnf install git -y 
      VALIDATE $? 
 
 else 
