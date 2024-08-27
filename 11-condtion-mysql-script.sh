@@ -5,18 +5,40 @@
 #if he doesn't root access, exit
 #install MYSQL server
 
+# #chekc user has ROOT access or not
+# USERID=$(id -u)
+# if [ $USERID -ne 0 ]
+# then
+#     echo -e "\e[31m You don't have root acces, please login as ROOT USER \e[0m"
+#     exit 1
+# fi
+
+# dnf install git -y
+# if [ $? -ne 0 ]
+# then
+#     echo -e "command is... \e[31m ERROR \e[31m"
+# else 
+#     echo -e "Installing GIT... \e[32m SUCCESS \e[0m"
+# fi
+
 #chekc user has ROOT access or not
 USERID=$(id -u)
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+
 if [ $USERID -ne 0 ]
 then
-    echo -e "\e[31m You don't have root acces, please login as ROOT USER \e[0m"
+    echo -e " $R You don't have root acces, please login as ROOT USER $N"
     exit 1
 fi
 
-dnf install gittt -y
+#Neat and clean script
+dnf install git -y
 if [ $? -ne 0 ]
 then
-    echo -e "command i... \e[31m ERROR \e[31m"
-else 
-    echo -e "Installing GIT... \e[32m SUCCESS \e[0m"
+    echo -e "command is... $R ERROR $N"
+    exit 1
+else   
+    echo -e "Installing GIT... $G SUCCESS $N"
 fi
