@@ -141,7 +141,7 @@ if [ $? -ne 0 ]
 then 
     echo -e " $R MYSQL is not installed please Install MYSQL $N"
 
-    dnf install mysqlvg -y 
+    dnf install mysq -y 
     VALIDATE $? "Installing MYSQL"
 
 else 
