@@ -7,3 +7,4 @@ echo "current working dorctory of user: $PWD"
 echo "Home diractory of current user: $HOME"
 echo "PID of script executing now: $$"
 sleep 100 &
+echo "PID if last background for sleep 100 & command: $!" 
