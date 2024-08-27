@@ -34,7 +34,7 @@ do
             dnf install $package -y
             CHECK $? "Installing $package"
         else 
-            echo "$Y $package is Alraedy instaaled, Please ignore $N"
+            echo -e "$Y $package is Alraedy instaaled, Please ignore $N"
 
         fi
 done
