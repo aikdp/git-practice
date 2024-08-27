@@ -4,9 +4,9 @@ USERID=$(id -u)
 #/var/log/loops-log-file redirectors<timestamp>.log
 LOG_FOLDER="/var/log/expense/"
 SCRIPT_NAME=$($0 | cut -d "." -f1)
-TIME=$(date +%Y-%m-%d-%H-%M-%S)
+TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
 mkdir -p $LOG_FOLDER
-LOG_FILE=$($LOG_FOLDER/$SCRIPT_NAME/$TIME.log)
+LOG_FILE=$($LOG_FOLDER/$SCRIPT_NAME/$TIME_STAMP.log)
 
 #colors
 R="\e[31m"
