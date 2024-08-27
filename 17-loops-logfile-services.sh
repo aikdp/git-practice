@@ -35,7 +35,6 @@ CHECK(){
             echo -e "$2 is $G SUCCESS $N" | tee -a $LOG_FILE
     fi
 }
-
 #Installing packages
 for package in $@
 do 
@@ -49,4 +48,3 @@ do
                 echo -e "$Y $package is Alraedy instaaled, Please ignore $N" | tee -a $LOG_FILE
         fi
 done
-        
