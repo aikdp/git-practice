@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 #/var/log/loops-log-file redirectors<timestamp>.log
-LOG_FOLDER="/var/log/expense"
+LOG_FOLDER="/var/log/expense/"
 SCRIPT_NAME=$($0 | cut -d "." -f1)
 TIME=$(date +%Y-%m-%d-%H-%M-%S)
 mkdir -p $LOG_FOLDER
