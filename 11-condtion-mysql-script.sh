@@ -72,7 +72,7 @@ if [ $? -ne 0 ]
 then 
     echo "MYSQL is not installed please Install MYSQL"
 
-    dnf install mysql -y 
+    dnf install mysqjj -y 
     if [ $? -ne 0 ]
     then
         echo -e "command is... $R ERROR $N"
