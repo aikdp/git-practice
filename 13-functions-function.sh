@@ -124,7 +124,7 @@ then
 fi
 
 #Neat and clean script with MYSQL INSTALLATION
-dnf list installed gitjj
+dnf list installed git
 if [ $? -ne 0 ]
 then 
     echo -e " $R GIT is not installed please Install GIT $N"
