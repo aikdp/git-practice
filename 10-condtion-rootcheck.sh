@@ -5,7 +5,7 @@
 #if he doesn't root access, exit
 #install MYSQL server
 
-
+#chekc user has ROOT access or not
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
