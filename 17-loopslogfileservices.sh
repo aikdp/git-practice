@@ -17,7 +17,7 @@ N="\e[0m"
 #Check user has root access or not
 if [ $USERID -eq 0 ]
     then    
-        echo -e"$Y USER has ROOT ACCESS $N" | TEE -a $LOG_FILE
+        echo -e"$Y USER has ROOT ACCESS $N" &>>$LOG_FILE
     else    
         echo -e"$R USER does not have root access, Please login as ROOT USER $N" | TEE -a $LOG_FILE
         exit 1
@@ -29,7 +29,7 @@ CHECK(){
         then    
             echo -e"$2 is $G SUCCESS $N" | TEE -a $LOG_FILE
         else
-            echo -e"$2 is $R ERROR $N" | TEE -a $LOG_FILE
+            echo -e"$2 is $R ERROR $N" &>>$LOG_FILE
             exit 1
     fi
 }
