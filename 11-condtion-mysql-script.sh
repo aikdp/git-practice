@@ -67,12 +67,12 @@ then
 fi
 
 #Neat and clean script with MYSQL INSTALLATION
-dnf list installed mysql
+dnf list installed mysqld
 if [ $? -ne 0 ]
 then 
     ech "MYSQL is not installed please Install MYSQL"
 
-    dnf install mysql -y
+    dnf install mysql -y 
     if [ $? -ne 0 ]
     then
         echo -e "command is... $R ERROR $N"
