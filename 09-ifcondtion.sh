@@ -40,11 +40,20 @@
 # echo "Given: $NUMBER is less than 17"
 # fi
 
-#Given number is not equal
+# #Given number is not equal
+# NUMBER=$1
+# if [ $NUMBER -ne 17 ]
+# then
+# echo "Given number is not 17"
+# else 
+# echo "Given number is 17"
+# fi
+
+#Given number is equal
 NUMBER=$1
-if [ $NUMBER -ne 17 ]
+if [ $NUMBER -eq 17 ]
 then
-echo "Given number is not 17"
-else 
 echo "Given number is 17"
+else 
+echo "Given number is not 17"
 fi
