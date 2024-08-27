@@ -67,10 +67,10 @@ then
 fi
 
 #Neat and clean script with MYSQL INSTALLATION
-dnf list installed mysqld
+dnf list installed mysql
 if [ $? -ne 0 ]
 then 
-    ech "MYSQL is not installed please Install MYSQL"
+    echo "MYSQL is not installed please Install MYSQL"
 
     dnf install mysql -y 
     if [ $? -ne 0 ]
