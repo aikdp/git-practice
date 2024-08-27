@@ -13,7 +13,7 @@ then
     exit 1
 fi
 
-dnf install git -y
+dnf install gittt -y
 if [ $? -ne 0 ]
 then
     echo -e "command i... \e[31m ERROR \e[31m"
